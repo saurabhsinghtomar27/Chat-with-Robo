@@ -38,7 +38,7 @@ mic.addEventListener("click", () => {
 })
 const chatbotvoice = (message) => {
     const speech = new SpeechSynthesisUtterance();
-    speech.text = `😵‍💫 Oops! Sorry, I didn't understand your question. `;
+    speech.text = ` Oops! Sorry, I didn't understand your question. `;
     if (message.includes('Who are you?') || message.includes('What is your name?')) {
         speech.text = 'I am Robo';
     }
