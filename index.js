@@ -34,7 +34,7 @@ const showchatbotmsg = (chatbotmsg) => {
 mic.addEventListener("click", () => {
 
     recognition.start();
-    console.log("Activated");
+    
 })
 const chatbotvoice = (message) => {
     const speech = new SpeechSynthesisUtterance();
@@ -57,7 +57,7 @@ const chatbotvoice = (message) => {
         speech.text = 'Hello. How can I help You';
     }
 
-    console.log(message);
+ 
     window.speechSynthesis.speak(speech);
     showchatbotmsg(speech.text);
 }
