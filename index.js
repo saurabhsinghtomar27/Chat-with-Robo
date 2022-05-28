@@ -39,21 +39,21 @@ mic.addEventListener("click", () => {
 const chatbotvoice = (message) => {
     const speech = new SpeechSynthesisUtterance();
     speech.text = ` Oops! Sorry, I didn't understand your question. `;
-    if (message.includes('Who are you?') || message.includes('What is your name?')) {
+    if (message.includes('Who are you?')||message.includes('Who are you') || message.includes('What is your name?')|| message.includes('What is your name')) {
         speech.text = 'I am Robo';
     }
 
-    else if (message.includes('Tell me a joke.') || message.includes('Do you know a joke?')) {
+    else if (message.includes('Tell me a joke.')||message.includes('Tell me a joke') || message.includes('Do you know a joke?')|| message.includes('Do you know a joke')) {
         let joke = Math.floor(Math.random() * jokes.length);
         speech.text = jokes[joke];
     }
-    else if (message.includes('Who made you?')) {
+    else if (message.includes('Who made you?')||message.includes('Who made you')) {
         speech.text = 'Saurabh Singh Tomar Made me'
     }
-    else if (message.includes('Are you a robot?')) {
+    else if (message.includes('Are you a robot?')||message.includes('Are you a robot')) {
         speech.text = 'Yes I am a robot, but I’m a good one. Let me prove it. How can I help you?';
     }
-    else if (message.includes('Hello.') || message.includes('Hi.')) {
+    else if (message.includes('Hello.') || message.includes('Hi.')|| message.includes('Hi')) {
         speech.text = 'Hello. How can I help You';
     }
 
